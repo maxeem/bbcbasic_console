@@ -1,0 +1,15 @@
+#!/bin/bash
+# BBC BASIC Docker wrapper
+# Usage:
+#   ./bbcbasic.sh          -> interactive BBC BASIC console
+#   ./bbcbasic.sh file.bbc -> run file.bbc
+
+IMAGE="abuajamieh/bbcbasic"
+
+if [ $# -eq 0 ]; then
+    # Interactive mode
+    docker run -it --rm -v "$PWD":/work -w /work "$IMAGE"
+else
+    # Run the given BBC BASIC program
+    docker run -it --rm -v "$PWD":/work -w /work "$IMAGE" "$1"
+fi
