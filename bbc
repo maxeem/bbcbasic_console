@@ -1,4 +1,6 @@
 #!/bin/bash
+# Maksim A.
+#
 # BBC BASIC Docker wrapper
 # Usage:
 #   ./bbcbasic.sh          -> interactive BBC BASIC console
